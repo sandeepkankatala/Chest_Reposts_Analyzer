@@ -1,0 +1,22 @@
+# Run from deployment/repository root:
+# docker compose -f training/compose.gpu.yaml --project-directory . up --build -d
+services:
+  medgemma:
+    build:
+      context: .
+      dockerfile: training/Dockerfile.gpu
+    gpus: all
+    ports:
+      - "127.0.0.1:8001:8001"
+    environment:
+      HF_TOKEN: ${HF_TOKEN:?Set your Hugging Face read token in this terminal}
+      MEDGEMMA_API_KEY: ${MEDGEMMA_API_KEY:?Set a random inference key in this terminal}
+      MEDGEMMA_MODEL: google/medgemma-1.5-4b-it
+      CHESTREPORT_ADAPTER_PATH: /adapter
+      MEDGEMMA_CONTEXT_TOKENS: ${MEDGEMMA_CONTEXT_TOKENS:-8192}
+    volumes:
+      - ./adapter:/adapter:ro
+      - model-cache:/cache/huggingface
+    restart: unless-stopped
+volumes:
+  model-cache:

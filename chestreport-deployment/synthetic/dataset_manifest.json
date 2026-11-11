@@ -1,0 +1,12 @@
+{
+  "provenance": "chestreport-authored-synthetic-v1",
+  "reviewed": false,
+  "seed": 42,
+  "prompt_version": "chestreport-json-v1",
+  "counts": {
+    "train": 640,
+    "validation": 80,
+    "test": 80
+  },
+  "limitation": "Authored templates share vocabulary across splits. Scores measure format learning on synthetic combinations, not clinical generalization."
+}

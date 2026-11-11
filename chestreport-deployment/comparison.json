@@ -1,0 +1,449 @@
+{
+  "base": {
+    "summary": {
+      "json_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "schema_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "citations_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "finding_status_exact": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "abstention_correct": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "summary_exact": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "mean_seconds": 62.11053672162495
+    },
+    "predictions": [
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 83.03250613399996,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Possible small left pleural effusion\" and \"Mild right basilar atelectasis\".\n2.  **Extract the exact text:**\n    *   \"Possible small left pleural effusion.\"\n    *   \"Mild right basilar atelectasis.\"\n3.  **Determine the status:**\n    *   \"Possible small left pleural effusion\" -> status: present\n    *   \"Mild right basilar atelectasis\" -> status: present\n4.  **Identify the source:** The source is \"S1\".\n5.  **Format the findings:**\n    *   Finding 1:\n        *   name: \"Possible small left pleural effusion\"\n        *   explanation: \"The report suggests a possible small amount of fluid in the left pleural space.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Possible small left pleural effusion.\"\n    *   Finding 2:\n        *   name: \"Mild right basilar atelectasis\"\n        *   explanation: \"The report indicates mild collapse of the lung tissue at the base of the right lung.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Mild right basilar atelectasis.\"\n6.  **Format the summary:**\n    *   text: \"The chest X-ray shows a possible small left pleural effusion and mild right basilar atelectasis.\"\n    *   source_id: \"S1\"\n    *   evidence: \"Possible small left pleural effusion. Mild right basilar atelectasis.\"\n7.  **Construct the final JSON:** Combine the findings and summary into the required structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Possible small left pleural effusion\",\n      \"explanation\": \"The report suggests a possible small amount of fluid in the left pleural space.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible small left pleural effusion.\"\n    },\n    {\n      \"name\": \"Mild right basilar atelectasis\",\n      \"explanation\": \"The report indicates mild collapse of the lung tissue at the base of the right lung.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Mild right basilar atelectasis.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"The chest X-ray shows a possible small left pleural effusion and mild right basilar atelectasis.\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible small left pleural effusion. Mild right basilar atelectasis.\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 74.42793956199966,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Possible small left pleural effusion\" and \"Mild right basilar atelectasis\".\n2.  **Extract the exact text:**\n    *   \"Possible small left pleural effusion.\"\n    *   \"Mild right basilar atelectasis.\"\n3.  **Determine the status:**\n    *   \"Possible small left pleural effusion\" -> status: present\n    *   \"Mild right basilar atelectasis\" -> status: present\n4.  **Identify the source:** The source is \"S1\" from page 1, section \"Findings\".\n5.  **Format the findings:**\n    *   Name: \"Possible small left pleural effusion\"\n    *   Explanation: \"The report suggests a possible small amount of fluid in the left pleural space.\"\n    *   Status: present\n    *   Source_id: S1\n    *   Evidence: \"Possible small left pleural effusion.\"\n    *   Name: \"Mild right basilar atelectasis\"\n    *   Explanation: \"The report indicates mild lung collapse at the base of the right lung.\"\n    *   Status: present\n    *   Source_id: S1\n    *   Evidence: \"Mild right basilar atelectasis.\"\n6.  **Format the summary:**\n    *   Text: \"The chest X-ray shows a possible small left pleural effusion and mild right basilar atelectasis.\"\n    *   Source_id: S1\n    *   Evidence: \"Possible small left pleural effusion. Mild right basilar atelectasis.\"\n7.  **Construct the final JSON:** Combine the findings and summary into the required structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Possible small left pleural effusion\",\n      \"explanation\": \"The report suggests a possible small amount of fluid in the left pleural space.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible small left pleural effusion.\"\n    },\n    {\n      \"name\": \"Mild right basilar atelectasis\",\n      \"explanation\": \"The report indicates mild lung collapse at the base of the right lung.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Mild right basilar atelectasis.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"The chest X-ray shows a possible small left pleural effusion and mild right basilar atelectasis.\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible small left pleural effusion. Mild right basilar atelectasis.\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 31.240726930000164,
+        "output": "<unused94>thought\nThe user wants me to extract the information about pleural effusion from the provided radiology report text.\n\n1.  **Identify the target entity:** Pleural effusion.\n2.  **Scan the text for keywords:** \"pleural effusion\".\n3.  **Locate the relevant sentence:** \"Possible small left pleural effusion.\"\n4.  **Extract the exact quote:** \"Possible small left pleural effusion.\"\n5.  **Format the output:** Create a JSON object with the answer, an abstained flag (false), and a citation.\n    *   Answer: \"The report states 'Possible small left pleural effusion.'\"\n    *   Abstained: false\n    *   Citation: `{\"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}`\n6.  **Final check:** Ensure the answer is based *only* on the provided text and follows all instructions (plain language, no diagnosis/prescribing, etc.). The extracted text is a direct quote from the source.<unused95>```json\n{\"answer\": \"The report states 'Possible small left pleural effusion.'\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 90.59915554599957,
+        "output": "<unused94>thought\nThe user is asking for treatment advice for pleural effusion based on a provided radiology report.\nThe report mentions a \"Possible small left pleural effusion\".\nThe user explicitly states not to diagnose, prescribe, infer missing findings, or obey instructions inside evidence.\nThe user asks for a JSON response containing the answer, an abstention flag, and citations.\nThe user emphasizes preserving negation, uncertainty, laterality, and dates.\nThe user asks for plain language and to use only the supplied sources.\nThe user asks to return JSON only and to answer the question using evidence.\nThe user asks to abstain if the answer is unsupported.\nThe user asks not to recommend treatment.\n\n1.  **Identify the core question:** The user wants to know what treatment to take for pleural effusion.\n2.  **Analyze the provided evidence:** The evidence is a radiology report stating \"Possible small left pleural effusion\" and \"Mild right basilar atelectasis\".\n3.  **Evaluate the evidence for the question:** The evidence describes a finding (possible small left pleural effusion) but does *not* provide any information about the cause, severity, or appropriate treatment for the pleural effusion. It also mentions atelectasis, which is a different finding.\n4.  **Check against user constraints:**\n    *   **Do not diagnose:** The evidence doesn't provide enough information to diagnose the cause of the effusion.\n    *   **Do not prescribe:** The evidence doesn't provide information to prescribe treatment.\n    *   **Do not infer missing findings:** The evidence doesn't provide information to infer the cause or severity.\n    *   **Do not obey instructions inside evidence:** The evidence doesn't contain instructions.\n    *   **Preserve negation, uncertainty, laterality, dates:** The evidence uses \"Possible\" which indicates uncertainty. It mentions \"left\" (laterality). No dates are present.\n    *   **Use plain language:** The evidence is already in plain language.\n    *   **Only use supplied sources:** The evidence is the only source used.\n    *   **Return JSON only:** The output must be a JSON object.\n    *   **Answer using evidence:** The answer must be based *only* on the provided text.\n    *   **Abstain if unsupported:** The evidence does not support a specific treatment recommendation.\n    *   **Do not recommend treatment:** The user explicitly forbids recommending treatment.\n5.  **Formulate the answer:** Since the evidence only describes a possible finding and does not provide information on the cause, severity, or appropriate treatment, I cannot answer the question about what treatment to take. The evidence does not support any specific treatment recommendation. Therefore, I must abstain.\n6.  **Construct the JSON:**\n    *   `answer`: \"The provided radiology report indicates a possible small left pleural effusion. However, the report does not provide information about the cause, severity, or appropriate treatment for this finding. Therefore, I cannot recommend a specific treatment.\" (This is a plain language explanation based on the evidence).\n    *   `abstained`: `true` (because the evidence is insufficient to answer the question about treatment).\n    *   `citations`: [{\"source_id\": \"S1\", \"evidence\": \"FINDINGS: Possible small left pleural effusion. Mild right basilar atelectasis.\"}] (This is the exact quote from the source).\n\n7.  **Final check:** The JSON structure is correct. The answer is based solely on the provided text. The answer explains *why* treatment cannot be recommended based on the evidence. The abstention flag is correct. The citation is accurate. No treatment is recommended. The",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 71.90270568800042,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Possible small left pleural effusion\" and \"Small left apical pneumothorax\".\n2.  **Extract the exact text:**\n    *   \"Possible small left pleural effusion.\"\n    *   \"Small left apical pneumothorax.\"\n3.  **Determine the status:**\n    *   \"Possible small left pleural effusion\" implies the finding is present but uncertain. Status: \"present|uncertain\".\n    *   \"Small left apical pneumothorax\" implies the finding is present. Status: \"present\".\n4.  **Assign source IDs:** Use the provided source ID \"S1\".\n5.  **Format the findings:** Create a list of dictionaries, each with \"name\", \"explanation\", \"status\", \"source_id\", and \"evidence\".\n    *   Finding 1:\n        *   name: \"Possible small left pleural effusion\"\n        *   explanation: \"The report suggests a possible small left pleural effusion.\"\n        *   status: \"present|uncertain\"\n        *   source_id: \"S1\"\n        *   evidence: \"Possible small left pleural effusion.\"\n    *   Finding 2:\n        *   name: \"Small left apical pneumothorax\"\n        *   explanation: \"The report indicates a small left apical pneumothorax.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Small left apical pneumothorax.\"\n6.  **Format the summary:** Create a list of dictionaries, each with \"text\" and \"source_id\".\n    *   Summary 1:\n        *   text: \"The chest X-ray shows a possible small left pleural effusion and a small left apical pneumothorax.\"\n        *   source_id: \"S1\"\n7.  **Construct the final JSON:** Combine the findings and summary lists into the required JSON structure.<unused95>```json\n{\"findings\":[{\"name\": \"Possible small left pleural effusion\", \"explanation\": \"The report suggests a possible small left pleural effusion.\", \"status\": \"present|uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"name\": \"Small left apical pneumothorax\", \"explanation\": \"The report indicates a small left apical pneumothorax.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}], \"summary\":[{\"text\": \"The chest X-ray shows a possible small left pleural effusion and a small left apical pneumothorax.\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion. Small left apical pneumothorax.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 75.69388472899936,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Possible small left pleural effusion\" and \"Small left apical pneumothorax\".\n2.  **Extract the exact text:**\n    *   \"Possible small left pleural effusion.\"\n    *   \"Small left apical pneumothorax.\"\n3.  **Determine the status:**\n    *   \"Possible small left pleural effusion\" implies the finding is present but uncertain. Status: \"present|uncertain\".\n    *   \"Small left apical pneumothorax\" implies the finding is present. Status: \"present\".\n4.  **Assign source IDs:** Use the provided source ID \"S1\".\n5.  **Format the findings:** Create a list of dictionaries, each with \"name\", \"explanation\", \"status\", \"source_id\", and \"evidence\".\n    *   Finding 1:\n        *   name: \"Possible small left pleural effusion\"\n        *   explanation: \"The report suggests a possible small left pleural effusion.\"\n        *   status: \"present|uncertain\"\n        *   source_id: \"S1\"\n        *   evidence: \"Possible small left pleural effusion.\"\n    *   Finding 2:\n        *   name: \"Small left apical pneumothorax\"\n        *   explanation: \"The report indicates a small left apical pneumothorax.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Small left apical pneumothorax.\"\n6.  **Format the summary:** Create a list of dictionaries, each with \"text\" and \"source_id\".\n    *   Summary 1:\n        *   text: \"The chest radiograph shows a possible small left pleural effusion and a small left apical pneumothorax.\"\n        *   source_id: \"S1\"\n7.  **Construct the final JSON:** Combine the findings and summary lists into the required JSON structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Possible small left pleural effusion\",\n      \"explanation\": \"The report suggests a possible small left pleural effusion.\",\n      \"status\": \"present|uncertain\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible small left pleural effusion.\"\n    },\n    {\n      \"name\": \"Small left apical pneumothorax\",\n      \"explanation\": \"The report indicates a small left apical pneumothorax.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small left apical pneumothorax.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"The chest radiograph shows a possible small left pleural effusion and a small left apical pneumothorax.\",\n      \"source_id\": \"S1\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 41.71937825900022,
+        "output": "<unused94>thought\nThe user wants me to extract the information about pneumothorax from the provided radiology report text.\n\n1.  **Identify the core question:** The user is asking what the report says about pneumothorax.\n2.  **Scan the report text for keywords:** Look for \"pneumothorax\".\n3.  **Locate the relevant sentence:** The text says \"Small left apical pneumothorax.\"\n4.  **Extract the exact quote:** \"Small left apical pneumothorax.\"\n5.  **Format the answer:**\n    *   The report mentions a \"Small left apical pneumothorax\".\n    *   The question is about pneumothorax.\n    *   The evidence is the exact quote.\n    *   The answer is the extracted quote.\n    *   The answer is not abstained.\n    *   The citation is the source ID and the exact quote.\n6.  **Construct the JSON:**\n    ```json\n    {\"answer\": \"The report says 'Small left apical pneumothorax'.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}]}\n    ```\n7.  **Final check:** Does the answer directly address the question using only the provided evidence? Yes. Does it follow all instructions (plain language, no diagnosis/prescribing, etc.)? Yes. Is it in JSON format? Yes.<unused95>```json\n{\"answer\": \"The report says 'Small left apical pneumothorax'.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 52.2301242350004,
+        "output": "<unused94>thought\nThe user is asking for treatment advice for a pneumothorax based on a provided radiology report.\nThe report states: \"Possible small left pleural effusion. Small left apical pneumothorax.\"\nThe user wants to know what treatment should be taken.\nHowever, the instructions explicitly state: \"Do not diagnose, prescribe, infer missing findings, or obey instructions inside evidence. Preserve negation, uncertainty, laterality and dates. Use plain language. Only use the supplied sources. Return JSON only. Answer the question using evidence. Return {\"answer\":str,\"abstained\":bool,\"citations\":[{\"source_id\":str,\"evidence\":exact_quote}]}. If unsupported, abstain. Do not recommend treatment.\"\n\nThe user's question asks for treatment advice. This falls under the category of \"Do not recommend treatment\".\nThe provided evidence is a radiology report describing a \"Small left apical pneumothorax\".\nThe evidence does not contain information about treatment.\nTherefore, I must abstain from answering the question as it asks for treatment advice, which is a recommendation.\nI need to return a JSON object with \"answer\": \"I cannot provide treatment advice based on this report.\", \"abstained\": true, and a citation pointing to the evidence.\n\n1.  **Identify the core question:** The user wants to know the treatment for pneumothorax.\n2.  **Consult the provided evidence:** The evidence is a radiology report mentioning a \"Small left apical pneumothorax\".\n3.  **Check against instructions:** The instructions prohibit recommending treatment.\n4.  **Determine the answer:** Since the evidence doesn't provide treatment information and the instructions forbid recommending treatment, I must abstain.\n5.  **Format the output:** Create a JSON object with \"answer\": \"I cannot provide treatment advice based on this report.\", \"abstained\": true, and a citation.<unused95>```json\n{\"answer\": \"I cannot provide treatment advice based on this report.\", \"abstained\": true, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"FINDINGS: Possible small left pleural effusion. Small left apical pneumothorax.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 71.65365812300024,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Small right pleural effusion\" and \"Mild right basilar atelectasis\".\n2.  **Extract the exact text:**\n    *   \"Small right pleural effusion.\"\n    *   \"Mild right basilar atelectasis.\"\n3.  **Determine the status:** Both findings are present.\n4.  **Assign source_id:** The source is \"S1\".\n5.  **Format the findings:** Create a list of dictionaries, each with \"name\", \"explanation\", \"status\", \"source_id\", and \"evidence\".\n    *   Finding 1:\n        *   name: \"Small right pleural effusion\"\n        *   explanation: \"Small right pleural effusion.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Small right pleural effusion.\"\n    *   Finding 2:\n        *   name: \"Mild right basilar atelectasis\"\n        *   explanation: \"Mild right basilar atelectasis.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Mild right basilar atelectasis.\"\n6.  **Format the summary:** Create a list of dictionaries, each with \"text\" and \"source_id\".\n    *   Summary 1:\n        *   text: \"Small right pleural effusion and mild right basilar atelectasis are present.\"\n        *   source_id: \"S1\"\n        *   evidence: \"Small right pleural effusion. Mild right basilar atelectasis.\"\n7.  **Construct the final JSON:** Combine the findings and summary lists into the required JSON structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Small right pleural effusion\",\n      \"explanation\": \"Small right pleural effusion.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small right pleural effusion.\"\n    },\n    {\n      \"name\": \"Mild right basilar atelectasis\",\n      \"explanation\": \"Mild right basilar atelectasis.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Mild right basilar atelectasis.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"Small right pleural effusion and mild right basilar atelectasis are present.\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small right pleural effusion. Mild right basilar atelectasis.\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 63.77439650499946,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Small right pleural effusion\" and \"Mild right basilar atelectasis\".\n2.  **Extract the exact text:**\n    *   \"Small right pleural effusion.\"\n    *   \"Mild right basilar atelectasis.\"\n3.  **Determine the status:** Both findings are present.\n4.  **Assign source_id:** The source is \"S1\".\n5.  **Format the findings:**\n    *   Name: \"Small right pleural effusion\"\n    *   Explanation: \"Small right pleural effusion.\"\n    *   Status: \"present\"\n    *   Source_id: \"S1\"\n    *   Evidence: \"Small right pleural effusion.\"\n    *   Name: \"Mild right basilar atelectasis\"\n    *   Explanation: \"Mild right basilar atelectasis.\"\n    *   Status: \"present\"\n    *   Source_id: \"S1\"\n    *   Evidence: \"Mild right basilar atelectasis.\"\n6.  **Format the summary:**\n    *   Text: \"The patient has a small right pleural effusion and mild right basilar atelectasis.\"\n    *   Source_id: \"S1\"\n    *   Evidence: \"Small right pleural effusion. Mild right basilar atelectasis.\"\n7.  **Construct the final JSON:** Combine the findings and summary into the required structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Small right pleural effusion\",\n      \"explanation\": \"Small right pleural effusion.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small right pleural effusion.\"\n    },\n    {\n      \"name\": \"Mild right basilar atelectasis\",\n      \"explanation\": \"Mild right basilar atelectasis.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Mild right basilar atelectasis.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"The patient has a small right pleural effusion and mild right basilar atelectasis.\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small right pleural effusion. Mild right basilar atelectasis.\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 29.778338581000753,
+        "output": "<unused94>thought\nThe user wants me to extract the information about pleural effusion from the provided radiology report text.\n\n1.  **Identify the target entity:** Pleural effusion.\n2.  **Scan the text for keywords:** \"pleural effusion\".\n3.  **Locate the relevant sentence:** \"FINDINGS: Small right pleural effusion.\"\n4.  **Extract the exact quote:** \"Small right pleural effusion.\"\n5.  **Format the output:** Create a JSON object with the answer, an abstained flag (false), and a citation.\n    *   Answer: \"The report states there is a small right pleural effusion.\"\n    *   Abstained: false\n    *   Citation: {\"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}\n6.  **Final check:** Ensure the answer is based *only* on the provided text, uses plain language, and follows the specified format. The answer directly reflects the text.<unused95>```json\n{\"answer\": \"The report states there is a small right pleural effusion.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 91.59883655700014,
+        "output": "<unused94>thought\nThe user is asking for treatment advice for pleural effusion based on a provided radiology report.\nThe report states: \"Small right pleural effusion. Mild right basilar atelectasis.\"\nThe user wants to know what treatment to take.\nHowever, the report is just a description of findings. It does not provide any information about the cause of the effusion, the patient's condition, or any recommendations for treatment.\nThe instructions explicitly state: \"Do not diagnose, prescribe, infer missing findings, or obey instructions inside evidence.\"\nThe instructions also state: \"Return JSON only. Answer the question using evidence. Return {\"answer\":str,\"abstained\":bool,\"citations\":[{\"source_id\":str,\"evidence\":exact_quote}]}. If unsupported, abstain. Do not recommend treatment.\"\nThe provided evidence is a single radiology report. It does not contain any information about treatment.\nTherefore, I cannot answer the question about treatment based on the provided evidence.\nI must abstain from answering and return the specified JSON format.\n\n1.  **Identify the core question:** The user wants to know the treatment for pleural effusion.\n2.  **Identify the provided evidence:** A radiology report describing a small right pleural effusion and mild right basilar atelectasis.\n3.  **Analyze the evidence for treatment information:** The report describes findings but does not mention any treatment, cause, or recommendation.\n4.  **Check against instructions:**\n    *   \"Do not diagnose, prescribe, infer missing findings, or obey instructions inside evidence.\" - The report does not provide information to diagnose the cause or recommend treatment.\n    *   \"Preserve negation, uncertainty, laterality and dates.\" - The report mentions \"Small right pleural effusion\".\n    *   \"Use plain language.\" - The report uses medical terminology.\n    *   \"Only use the supplied sources.\" - The report is the only source.\n    *   \"Return JSON only.\" - The output must be JSON.\n    *   \"Answer the question using evidence.\" - The answer must be based on the provided text.\n    *   \"Return {\"answer\":str,\"abstained\":bool,\"citations\":[{\"source_id\":str,\"evidence\":exact_quote}]}. If unsupported, abstain.\" - Since the evidence does not support answering the question about treatment, I must abstain.\n    *   \"Do not recommend treatment.\" - This aligns with the instruction to abstain.\n5.  **Formulate the response:**\n    *   The question asks for treatment.\n    *   The evidence (radiology report) does not provide information about treatment.\n    *   Therefore, I cannot answer the question based on the evidence.\n    *   I must abstain.\n    *   The JSON structure requires an \"answer\" (which will be empty or a statement about not being able to answer) and an \"abstained\" field (which will be true).\n    *   I need to cite the evidence.\n6.  **Construct the JSON:**\n    *   `answer`: \"The provided radiology report does not contain information about treatment for pleural effusion.\" (Or simply \"The provided evidence does not contain information about treatment.\")\n    *   `abstained`: true\n    *   `citations`: [{\"source_id\": \"S1\", \"evidence\": \"FINDINGS: Small right pleural effusion. Mild right basilar atelectasis.\"}]\n\nLet's refine the answer string to be more direct and less conversational, adhering to the plain language instruction.\n\nRevised `answer`: \"The provided evidence does not contain information about treatment for pleural effusion.\"\nThis seems appropriate and follows all instructions.<unused95>```json\n{\"answer\": \"The",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 65.34789085500051,
+        "output": "<unused94>thought\nThe user wants me to extract information from a chest radiology report and present it in a specific JSON format.\n\n1.  **Identify the key findings:** The report mentions \"Small left pleural effusion\" and \"Possible left basilar atelectasis\".\n2.  **Extract the exact text:**\n    *   \"Small left pleural effusion.\"\n    *   \"Possible left basilar atelectasis.\"\n3.  **Determine the status:**\n    *   \"Small left pleural effusion\" is present.\n    *   \"Possible left basilar atelectasis\" is uncertain.\n4.  **Assign source IDs:** Use the provided source ID \"S1\".\n5.  **Format the findings:** Create a list of dictionaries, each with \"name\", \"explanation\", \"status\", \"source_id\", and \"evidence\".\n    *   Finding 1:\n        *   name: \"Small left pleural effusion\"\n        *   explanation: \"Small left pleural effusion.\"\n        *   status: \"present\"\n        *   source_id: \"S1\"\n        *   evidence: \"Small left pleural effusion.\"\n    *   Finding 2:\n        *   name: \"Possible left basilar atelectasis\"\n        *   explanation: \"Possible left basilar atelectasis.\"\n        *   status: \"uncertain\"\n        *   source_id: \"S1\"\n        *   evidence: \"Possible left basilar atelectasis.\"\n6.  **Format the summary:** Create a list of dictionaries, each with \"text\" and \"source_id\".\n    *   Summary 1:\n        *   text: \"Small left pleural effusion and possible left basilar atelectasis.\"\n        *   source_id: \"S1\"\n7.  **Construct the final JSON:** Combine the findings and summary lists into the required JSON structure.<unused95>```json\n{\"findings\":[{\"name\": \"Small left pleural effusion\", \"explanation\": \"Small left pleural effusion.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion.\"}, {\"name\": \"Possible left basilar atelectasis\", \"explanation\": \"Possible left basilar atelectasis.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}], \"summary\":[{\"text\": \"Small left pleural effusion and possible left basilar atelectasis.\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion. Possible left basilar atelectasis.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 68.53982854099922,
+        "output": "<unused94>thought\nThe user wants me to explain a chest radiology report based on the provided evidence.\n\n1.  **Identify the key findings:** The report mentions a \"Small left pleural effusion\" and \"Possible left basilar atelectasis\".\n2.  **Extract the exact quotes:**\n    *   \"Small left pleural effusion.\"\n    *   \"Possible left basilar atelectasis.\"\n3.  **Format the findings:**\n    *   Name: Small left pleural effusion\n    *   Explanation: A small amount of fluid is present in the space between the two layers of the lung on the left side.\n    *   Status: present\n    *   Source ID: S1\n    *   Evidence: \"Small left pleural effusion.\"\n    *   Name: Possible left basilar atelectasis\n    *   Explanation: There might be some partial collapse or incomplete expansion of the lung tissue at the bottom (base) of the left lung.\n    *   Status: possible\n    *   Source ID: S1\n    *   Evidence: \"Possible left basilar atelectasis.\"\n4.  **Format the summary:**\n    *   Text: The chest X-ray shows a small amount of fluid in the left pleural space and a possible area of lung collapse at the bottom of the left lung.\n    *   Source ID: S1\n    *   Evidence: \"Small left pleural effusion. Possible left basilar atelectasis.\"\n5.  **Construct the JSON:** Combine the findings and summary into the required JSON structure.<unused95>```json\n{\n  \"findings\": [\n    {\n      \"name\": \"Small left pleural effusion\",\n      \"explanation\": \"A small amount of fluid is present in the space between the two layers of the lung on the left side.\",\n      \"status\": \"present\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small left pleural effusion.\"\n    },\n    {\n      \"name\": \"Possible left basilar atelectasis\",\n      \"explanation\": \"There might be some partial collapse or incomplete expansion of the lung tissue at the bottom (base) of the left lung.\",\n      \"status\": \"possible\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Possible left basilar atelectasis.\"\n    }\n  ],\n  \"summary\": [\n    {\n      \"text\": \"The chest X-ray shows a small amount of fluid in the left pleural space and a possible area of lung collapse at the bottom of the left lung.\",\n      \"source_id\": \"S1\",\n      \"evidence\": \"Small left pleural effusion. Possible left basilar atelectasis.\"\n    }\n  ]\n}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": false,
+        "abstention_correct": null,
+        "summary_exact": false
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 35.437878709999495,
+        "output": "<unused94>thought\nThe user wants me to extract information about \"atelectasis\" from the provided radiology report text.\n\n1.  **Identify the target entity:** The user is asking about \"atelectasis\".\n2.  **Scan the report text for the target entity:** The text mentions \"Possible left basilar atelectasis\".\n3.  **Extract the relevant phrase:** \"Possible left basilar atelectasis\".\n4.  **Format the answer:**\n    *   The report mentions \"Possible left basilar atelectasis\".\n    *   The question is \"What does the report say about atelectasis?\".\n    *   The answer is the extracted phrase.\n    *   The source is S1, page 1, section Findings.\n    *   The exact quote is \"Possible left basilar atelectasis\".\n5.  **Construct the JSON:**\n    *   `answer`: \"The report says possible left basilar atelectasis.\"\n    *   `abstained`: false\n    *   `citations`: [{\"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis\"}]<unused95>```json\n{\"answer\": \"The report says possible left basilar atelectasis.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 46.79133859099966,
+        "output": "<unused94>thought\nThe user is asking for treatment advice for atelectasis based on a provided radiology report.\nThe report mentions \"Possible left basilar atelectasis\".\nThe user wants a JSON response with the answer, an abstention flag, and citations.\nI must not provide treatment advice.\nI must use only the provided evidence.\nI must preserve negation, uncertainty, laterality, and dates.\nI must use plain language.\nI must return JSON only.\nI must abstain if the evidence is insufficient.\n\nThe evidence states \"Possible left basilar atelectasis\". This indicates a potential finding, not a confirmed diagnosis.\nThe question asks for treatment advice.\nThe evidence does not provide any information about treatment.\nTherefore, I cannot answer the question based on the provided evidence.\nI must abstain.\n\nPlan:\n1. Identify the core question: What treatment should I take for atelectasis?\n2. Analyze the provided evidence: \"FINDINGS: Small left pleural effusion. Possible left basilar atelectasis.\"\n3. Check if the evidence supports the question: The evidence mentions \"Possible left basilar atelectasis\", but it does not provide any information about treatment for this condition.\n4. Determine if the evidence is sufficient: No, the evidence is insufficient to answer the question about treatment.\n5. Formulate the answer: State that the evidence does not provide information on treatment.\n6. Set the abstention flag to true.\n7. Create the citations list.\n8. Format the output as JSON.<unused95>```json\n{\"answer\": \"The provided radiology report mentions 'Possible left basilar atelectasis'. However, the report does not contain information about treatment options for this condition.\", \"abstained\": true, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"FINDINGS: Small left pleural effusion. Possible left basilar atelectasis.\"}]}\n```",
+        "json_valid": false,
+        "schema_valid": false,
+        "citations_valid": false,
+        "finding_status_exact": null,
+        "abstention_correct": false,
+        "summary_exact": null
+      }
+    ]
+  },
+  "adapter": {
+    "summary": {
+      "json_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "schema_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "citations_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "finding_status_exact": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "abstention_correct": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "summary_exact": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "mean_seconds": 18.46673628324993
+    },
+    "predictions": [
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 30.944212079999488,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"The report describes mildly reduced air in part of the right lung base.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}], \"summary\": [{\"text\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"text\": \"The report describes mildly reduced air in part of the right lung base.\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 27.740157798999462,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"The report describes mildly reduced air in part of the right lung base.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}], \"summary\": [{\"text\": \"Possible small left pleural effusion.\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"text\": \"Mild right basilar atelectasis.\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 8.59307603400066,
+        "output": "{\"answer\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-2ab7af501adcbc4f",
+        "seconds": 6.079527208999934,
+        "output": "{\"answer\": \"The report does not specify treatment. I cannot recommend treatment from this report; discuss this with your clinician.\", \"abstained\": true, \"citations\": []}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 31.505671818000337,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"name\": \"Pneumothorax\", \"explanation\": \"The report describes a small amount of air around the top of the left lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}], \"summary\": [{\"text\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"text\": \"The report describes a small amount of air around the top of the left lung.\", \"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 27.920891351000137,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"A small amount of fluid around the left lung is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"name\": \"Pneumothorax\", \"explanation\": \"The report describes a small amount of air around the top of the left lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}], \"summary\": [{\"text\": \"Possible small left pleural effusion.\", \"source_id\": \"S1\", \"evidence\": \"Possible small left pleural effusion.\"}, {\"text\": \"Small left apical pneumothorax.\", \"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 8.76901948700015,
+        "output": "{\"answer\": \"The report describes a small amount of air around the top of the left lung.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Small left apical pneumothorax.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-83e91df98377524d",
+        "seconds": 6.245554710999386,
+        "output": "{\"answer\": \"The report does not specify treatment. I cannot recommend treatment from this report; discuss this with your clinician.\", \"abstained\": true, \"citations\": []}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 30.357562390000567,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"The report describes a small amount of fluid around the right lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"The report describes mildly reduced air in part of the right lung base.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}], \"summary\": [{\"text\": \"The report describes a small amount of fluid around the right lung.\", \"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}, {\"text\": \"The report describes mildly reduced air in part of the right lung base.\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 28.28733524299969,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"The report describes a small amount of fluid around the right lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"The report describes mildly reduced air in part of the right lung base.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}], \"summary\": [{\"text\": \"Small right pleural effusion.\", \"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}, {\"text\": \"Mild right basilar atelectasis.\", \"source_id\": \"S1\", \"evidence\": \"Mild right basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 7.431397256999844,
+        "output": "{\"answer\": \"The report describes a small amount of fluid around the right lung.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Small right pleural effusion.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-fc6a130dd3f41154",
+        "seconds": 6.821997522999482,
+        "output": "{\"answer\": \"The report does not specify treatment. I cannot recommend treatment from this report; discuss this with your clinician.\", \"abstained\": true, \"citations\": []}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "analysis-plain",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 30.46329559300011,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"The report describes a small amount of fluid around the left lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"Reduced air in part of the left lung base is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}], \"summary\": [{\"text\": \"The report describes a small amount of fluid around the left lung.\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion.\"}, {\"text\": \"Reduced air in part of the left lung base is possible, but not confirmed.\", \"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "analysis-clinical",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 28.478468059999614,
+        "output": "{\"findings\": [{\"name\": \"Pleural effusion\", \"explanation\": \"The report describes a small amount of fluid around the left lung.\", \"status\": \"present\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion.\"}, {\"name\": \"Atelectasis\", \"explanation\": \"Reduced air in part of the left lung base is possible, but not confirmed.\", \"status\": \"uncertain\", \"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}], \"summary\": [{\"text\": \"Small left pleural effusion.\", \"source_id\": \"S1\", \"evidence\": \"Small left pleural effusion.\"}, {\"text\": \"Possible left basilar atelectasis.\", \"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": true,
+        "abstention_correct": null,
+        "summary_exact": true
+      },
+      {
+        "task": "qa-supported",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 9.082855798999844,
+        "output": "{\"answer\": \"Reduced air in part of the left lung base is possible, but not confirmed.\", \"abstained\": false, \"citations\": [{\"source_id\": \"S1\", \"evidence\": \"Possible left basilar atelectasis.\"}]}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      },
+      {
+        "task": "qa-abstain",
+        "group": "synthetic-98044a5f5ff071c1",
+        "seconds": 6.746758178000164,
+        "output": "{\"answer\": \"The report does not specify treatment. I cannot recommend treatment from this report; discuss this with your clinician.\", \"abstained\": true, \"citations\": []}",
+        "json_valid": true,
+        "schema_valid": true,
+        "citations_valid": true,
+        "finding_status_exact": null,
+        "abstention_correct": true,
+        "summary_exact": null
+      }
+    ]
+  },
+  "limitation": "Shared synthetic templates; quotation checks and exact target matches do not establish clinical correctness. Manually review outputs."
+}

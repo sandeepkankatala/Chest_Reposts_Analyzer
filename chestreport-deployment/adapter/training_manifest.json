@@ -1,0 +1,33 @@
+{
+  "base_model": "google/medgemma-1.5-4b-it",
+  "base_revision": "91850547d9f0b2fdd21aa7c5f4f3d1a8a52c243b",
+  "prompt_version": "chestreport-json-v1",
+  "adapter_version": "chestreport-synthetic-v1",
+  "synthetic_starter": true,
+  "clinical_validation": false,
+  "smoke_only": false,
+  "parameters": {
+    "train": "training/data/synthetic/train.jsonl",
+    "validation": "training/data/synthetic/validation.jsonl",
+    "output": "training/output/chestreport-synthetic-v1",
+    "model": "google/medgemma-1.5-4b-it",
+    "epochs": 2,
+    "max_length": 1024,
+    "rank": 8,
+    "max_steps": -1,
+    "allow_synthetic_starter": true,
+    "revision": "91850547d9f0b2fdd21aa7c5f4f3d1a8a52c243b"
+  },
+  "train_sha256": "a2bf076dc2953009ad342ddc767a6b1136e3a03ae2d8f44e59f7fa2c6a14afb6",
+  "validation_sha256": "6ab97cdf84b9561853f3ecd19d8088bb3604ab9238216b8dc1f364c64b9d87b1",
+  "gpu": "Tesla T4",
+  "peak_allocated_gb": 6.864945888519287,
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "peft": "0.18.1",
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.49.2",
+    "datasets": "4.5.0"
+  }
+}

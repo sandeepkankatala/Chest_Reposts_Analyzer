@@ -1,0 +1,118 @@
+{
+  "archive": {
+    "crc_ok": true,
+    "extracted_files_match": 32,
+    "sha256": "b23bd061b74dc8b18941364d65522d19cb4cc9919ebbe23ebdf72d61315f5565"
+  },
+  "manifest_valid": true,
+  "dataset": {
+    "hashes_match": true,
+    "counts": {
+      "train": 640,
+      "validation": 80,
+      "test": 80
+    },
+    "group_counts": {
+      "train": 160,
+      "validation": 20,
+      "test": 20
+    },
+    "no_cross_split_groups_or_prompts": true
+  },
+  "weights": {
+    "tensor_count": 272,
+    "parameters": 4456448,
+    "nonzero_B_matrices": 136,
+    "finite_and_layout_valid": true,
+    "bytes": 17865944,
+    "sha256": "b1b9544a5364b23224043ab83f1282d3fa89cfb375c5d96d151f9fecf374abc2"
+  },
+  "base": {
+    "saved_metrics_reproduced": true,
+    "summary": {
+      "json_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "schema_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "citations_valid": {
+        "rate": 0.0,
+        "count": 16
+      },
+      "finding_status_exact": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "abstention_correct": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "summary_exact": {
+        "rate": 0.0,
+        "count": 8
+      },
+      "mean_seconds": 62.11053672162495
+    },
+    "evaluated_reports": 4,
+    "mean_seconds_by_task": {
+      "analysis-plain": 72.98419020000028,
+      "analysis-clinical": 70.60901233424943,
+      "qa-supported": 34.54408062000016,
+      "qa-abstain": 70.30486373224994
+    },
+    "diagnostic_final_segment_json_valid": 14
+  },
+  "adapter": {
+    "saved_metrics_reproduced": true,
+    "summary": {
+      "json_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "schema_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "citations_valid": {
+        "rate": 1.0,
+        "count": 16
+      },
+      "finding_status_exact": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "abstention_correct": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "summary_exact": {
+        "rate": 1.0,
+        "count": 8
+      },
+      "mean_seconds": 18.46673628324993
+    },
+    "evaluated_reports": 4,
+    "mean_seconds_by_task": {
+      "analysis-plain": 30.817685470250126,
+      "analysis-clinical": 28.106713113249725,
+      "qa-supported": 8.469087144250125,
+      "qa-abstain": 6.473459405249741
+    },
+    "diagnostic_final_segment_json_valid": 16
+  },
+  "source_matches": {
+    "backend/prompts.py": true,
+    "training/serve_model.py": true,
+    "training/evaluate_adapter.py": true,
+    "training/train_qlora.py": true
+  },
+  "limits": [
+    "Inspected downloaded artifacts and rescored saved outputs; did not rerun GPU inference.",
+    "Only four synthetic report groups were evaluated, with sentence templates shared with training.",
+    "Base strict JSON failure is partly output-format mismatch; it is not zero medical accuracy.",
+    "Deployment image torch 2.6/CUDA 12.4 differs from recorded training torch 2.14.1/CUDA 13.0; verify adapter loading on the deployment GPU."
+  ]
+}

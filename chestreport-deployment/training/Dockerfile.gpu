@@ -1,0 +1,12 @@
+# Build from the repository root or the Colab deployment ZIP root.
+# NVIDIA driver + NVIDIA Container Toolkit required on the GPU VM.
+FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+WORKDIR /app
+COPY training/requirements.txt training/requirements-serve.txt /app/training/
+RUN python -m pip install --no-cache-dir -r training/requirements.txt -r training/requirements-serve.txt
+COPY backend/__init__.py backend/prompts.py /app/backend/
+COPY training/serve_model.py /app/training/
+ENV PYTHONUNBUFFERED=1 HF_HOME=/cache/huggingface MEDGEMMA_CONTEXT_TOKENS=8192
+EXPOSE 8001
+HEALTHCHECK --start-period=900s --interval=30s --timeout=5s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=4)"
+CMD ["python", "-m", "uvicorn", "training.serve_model:app", "--host", "0.0.0.0", "--port", "8001", "--workers", "1", "--limit-concurrency", "8", "--no-access-log"]
